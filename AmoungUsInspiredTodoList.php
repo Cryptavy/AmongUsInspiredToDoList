@@ -48,13 +48,15 @@
         </tr>
       </thead>
        	<tbody>
-          <tr>
-             <td>1</td>
-             <td class="task">Task holder</td>
-             <td class="delete">
-             	<a href="#">x</a>
-             </td>
-          </tr>
+           <?php $i =1; while ($row = mysqli_fetch_array($task)) { ?>     
+                <tr>
+                    <td>1</td>
+                    <td class="task">Task holder</td>
+                    <td class="delete">
+             	        <a href="#">x</a>
+                    </td>
+                </tr>
+            <?php $i++; } ?>
         </tbody>
     </table>
 </body>
