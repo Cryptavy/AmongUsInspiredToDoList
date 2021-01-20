@@ -1,25 +1,25 @@
 <?php
     $errors = "";
     
-    $db = mysqli_connect('localhost','root','','tasklist');
+    $db = mysqli_connect('localhost','root','','AmoungUsInspiredTodoList');
 
     if (isset($_POST['submit'])){
         $task = $_POST['task'];
         if (empty($task)){
-            $errors = "Must fil in the task";
+            $errors = "Must fill in the task";
         }
         else
-        mysqli_query($db,"INSERT INTO todo (task) VALUES ('$task')");
-        header('location: ToDoList.php');
+        mysqli_query($db,"INSERT INTO tasks (task) VALUES ('$task')");
+        header('location: AmoungUsInspiredTodoList.php');
     }
 
     if (isset($_GET['delTask'])){
         $id = $_GET['delTask'];
-        mysqli_query($db, "DELETE FROM todo WHERE id=$id");
-        header('location: ToDoList.php');
+        mysqli_query($db, "DELETE FROM tasks WHERE id=$id");
+        header('location: AmoungUsInspiredTodoList.php');
     }
 
-    $task = mysqli_query($db,"SELECT * FROM todo");
+    $task = mysqli_query($db,"SELECT * FROM tasks");
 ?>
 <html>
 <head>
@@ -32,7 +32,7 @@
         <h2> Todo List application using PHP and MySQL</h2>
     </div>
     
-    <form method="POST" action="ToDoList.php">
+    <form method="POST" action="AmoungUsInspiredTodoList.php">
     <?php if(isset($errors)) { ?>
         <p><?php echo $errors; ?> </p>
     <?php } ?>
@@ -48,16 +48,15 @@
         </tr>
       </thead>
        	<tbody>
-           <?php $i =1; while ($row = mysqli_fetch_array($task)) { ?>     
-                <tr>
-                    <td><?php echo $row['id']; ?></td>
-                    <td class="task"><?php echo $row['task']; ?></td>
-                    <td class="delete">
-             	        <a href="ToDoList.php?delTask=<?php echo $row['id'];?>">x</a>
-                    </td>
-                </tr>
+           <?php $i = 1; while ($row = mysqli_fetch_array($task)) { ?>
+            <tr>
+            <td><?php echo $row['id']; ?></td>
+            <td class="task"><?php echo $row['task']; ?></td>
+            <td class="delete">
+            <a href="AmoungUsInspiredTodoList.php?delTask=<?php echo $row['id'];?>">x</a>
+            </td>
+            </tr>
             <?php $i++; } ?>
-        </tbody>
     </table>
 </body>
 </html>
