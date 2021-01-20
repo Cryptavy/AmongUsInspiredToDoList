@@ -1,3 +1,6 @@
+body{
+    background-image:url('BackgroundForCrudApp.gif');
+}
 .heading{
     width: 50%;
     margin: 30px auto;
