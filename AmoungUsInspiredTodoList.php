@@ -50,10 +50,10 @@
        	<tbody>
            <?php $i =1; while ($row = mysqli_fetch_array($task)) { ?>     
                 <tr>
-                    <td>1</td>
-                    <td class="task">Task holder</td>
+                    <td><?php echo $row['id']; ?></td>
+                    <td class="task"><?php echo $row['task']; ?></td>
                     <td class="delete">
-             	        <a href="#">x</a>
+             	        <a href="ToDoList.php?delTask=<?php echo $row['id'];?>">x</a>
                     </td>
                 </tr>
             <?php $i++; } ?>
