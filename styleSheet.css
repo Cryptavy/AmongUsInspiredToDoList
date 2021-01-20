@@ -1,0 +1,17 @@
+.heading{
+    width: 50%;
+    margin: 30px auto;
+    text-align:center;
+    color:rgb(150, 36, 150);
+    background:  pink;
+    border: 5px solid blueviolet;
+    border-radius:20px;
+}
+form{
+    width: 50%;
+    margin:30px auto;
+    border-radius: 20px;
+    padding:10px;
+    background:pink;
+    border:5px solid blueviolet;
+}
