@@ -33,6 +33,9 @@
     </div>
     
     <form method="POST" action="ToDoList.php">
+    <?php if(isset($errors)) { ?>
+        <p><?php echo $errors; ?> </p>
+    <?php } ?>
         <input type="text" name="task" class="task_input">
         <button type="submit" class="task_btn" name="submit">Add Task</button>
     </form>
