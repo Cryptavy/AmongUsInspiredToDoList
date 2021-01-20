@@ -15,3 +15,22 @@ form{
     background:pink;
     border:5px solid blueviolet;
 }
+form p{
+    color: red;
+    margin: 0px;
+}
+.task_input{
+    width: 76%;
+    height: 15px;
+    padding: 10px;
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+}
+.task_btn{
+    height: 39px;
+    background: pink;
+    color:rgb(150, 36, 150);
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
