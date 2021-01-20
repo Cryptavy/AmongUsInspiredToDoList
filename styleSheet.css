@@ -34,3 +34,40 @@ form p{
     border-radius: 20px;
     padding: 5px 20px;
 }
+table{
+    width: 50%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 3px solid blueviolet;
+}
+
+th{
+    font-size: 18px;
+}
+
+th,td{
+    border: none;
+    height: 30px;
+    padding: 2px;
+    color: blueviolet;
+}
+
+tr:hover{
+    background: pink ;
+}
+.task{
+    text-align: left;
+}
+.delete{
+    text-align: center;
+}
+.delete a{
+    color: rgb(150, 36, 150);
+    background: pink;
+    padding: 1px 6px;
+    border-radius: 3px;
+    text-decoration: none;
+}
