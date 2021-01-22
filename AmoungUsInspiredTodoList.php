@@ -1,5 +1,5 @@
 <?php
-    $errors = "";
+    $errors = "Please fill up the text bar";
     
     $db = mysqli_connect('localhost','root','','AmoungUsInspiredTodoList');
 
